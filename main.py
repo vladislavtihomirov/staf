@@ -11,7 +11,6 @@ with open('all.csv', 'r') as file:
                                       host="127.0.0.1",
                                       port="5433",
                                       database="users")
-
         cur = connection.cursor()
         print('''Connected to DB''')
         cur.executemany('''INSERT INTO users_test (channel_id, device_type, tags, push_address, named_user_id, opt_in, installed, last_registration, created)
